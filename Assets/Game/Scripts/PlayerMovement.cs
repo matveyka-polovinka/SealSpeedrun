@@ -16,6 +16,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce(transform.forward * vertical * move_force, ForceMode.Impulse);
-        rb.MoveRotation(rb.rotation * Quaternion.Euler(horizontal * rotate_force * Time.fixedDeltaTime * Vector3.up));
+        rb.MoveRotation(rb.rotation * Quaternion.Euler(Vector3.up * horizontal * rotate_force * Time.fixedDeltaTime));
     }
 }
